@@ -14,8 +14,7 @@ Information about political figures is highly dispared, the public accessible da
 
 This project is built by amazing volunteers and you can be one of them! Here's a list of ways in [which you can contribute to this project](.github/CONTRIBUTING.MD).
 
-You can also list any pending features and planned improvements for the project here.
-
+You can also have a look at the list below for the open issues. Please leave a comment on an issue if you want to work on it.
 ### Currently [open issues](https://github.com/code4romania/catalog-politic/issues)
 
 ## Built With
@@ -44,8 +43,7 @@ DynamoDB
 
 ## Deployment
 
-Guide users through getting your code up and running on their own system. In this section you can talk about:
-1. Installation process
+Installation process
 
 Starting a local development server
 ```
@@ -57,11 +55,6 @@ Build the website and serve it locally
 gatsby build
 gatsby serve
 ```
-2. Software dependencies
-3. Latest releases
-4. API references
-
-Describe and show how to build your code and run the tests. 
 
 ## Feedback
 
