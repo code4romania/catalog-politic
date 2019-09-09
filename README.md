@@ -16,6 +16,8 @@ This project is built by amazing volunteers and you can be one of them! Here's a
 
 You can also list any pending features and planned improvements for the project here.
 
+### Currently [open issues](https://github.com/code4romania/catalog-politic/issues)
+
 ## Built With
 
 GatsbyJS
