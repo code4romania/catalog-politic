@@ -97,7 +97,7 @@ exports.onCreatePage = ({
         matchPath: matchPath,
         context: {
           initialLanguage: locale,
-          initialI18nStore: resources,
+          initialI18nStore: translations,
           pathname: localizedPath
         }
       });
