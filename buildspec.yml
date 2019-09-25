@@ -28,6 +28,7 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
 artifacts:
+  base-directory: catalog-politic-site/public
   files:
-    - catalog-politic-site/public/**/*
+    - **/*
 
