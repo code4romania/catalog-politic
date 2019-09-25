@@ -20,7 +20,7 @@ phases:
       - echo Build started on `date`
       - cd catalog-politic-site
       - npm install
-      - gatsby build
+      - gatsby build --prefix-paths
     finally:
       - echo This always runs even if the install command fails
   post_build:
