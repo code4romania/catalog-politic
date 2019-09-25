@@ -29,4 +29,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - catalog-politic-site/public
+    - catalog-politic-site/public/**/*
+  name: public
+
