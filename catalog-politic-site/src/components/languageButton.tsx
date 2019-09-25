@@ -27,6 +27,7 @@ export default (
 
   interface Data {
     site: {
+      pathPrefix?: string
       siteMetadata: {
         locales: string[]
       }
@@ -36,6 +37,7 @@ export default (
   const data = useStaticQuery<Data>(graphql`
     {
       site {
+        pathPrefix
         siteMetadata {
           locales
         }
@@ -55,7 +57,18 @@ export default (
    * @returns Same pathname, but localized to the new locale
    */
   const getNewPathname = function(locale: string, pathname: string) {
-    const split = pathname.split('/');
+    let prefix: string = '';
+
+    if (data.site.pathPrefix) {
+      if (pathname.startsWith(data.site.pathPrefix)) {
+        pathname = pathname.substring(
+          data.site.pathPrefix.length,
+          pathname.length);
+        prefix = data.site.pathPrefix;
+      }
+    }
+
+    const split: string[] = pathname.split('/');
 
     // Check if the first component represents a locale
     if (data.site.siteMetadata.locales.includes(split[1])) {
@@ -64,7 +77,7 @@ export default (
       // Add a locale component
       split.splice(1, 0, locale);
     }
-    return split.join('/');
+    return prefix + split.join('/');
   }
 
   /**
