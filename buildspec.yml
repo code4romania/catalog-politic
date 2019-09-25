@@ -30,5 +30,4 @@ phases:
 artifacts:
   files:
     - catalog-politic-site/public/**/*
-  name: public
 
