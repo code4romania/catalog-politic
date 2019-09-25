@@ -21,7 +21,6 @@ phases:
       - cd catalog-politic-site
       - npm install
       - gatsby build
-      - tar -czvf build.tar.gz public
     finally:
       - echo This always runs even if the install command fails
   post_build:
@@ -30,4 +29,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - catalog-politic-site/build.tar.gz
+    - catalog-politic-site/public
