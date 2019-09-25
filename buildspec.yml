@@ -2,10 +2,10 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      - nodejs: 10
     commands:
       - echo Entered the install phase...
-      - apt update -y
-      - apt install nodejs -y
       - npm install -g gatsby-cli
     finally:
       - echo This always runs even if the update or install command fails
