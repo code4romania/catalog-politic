@@ -57,20 +57,28 @@ export default (
    * @returns Same pathname, but localized to the new locale
    */
   const getNewPathname = function(locale: string, pathname: string) {
+
     let prefix: string = '';
 
+    // Check if the pathPrefix is set and if we're using it (i.e. built with
+    // --prefix-paths flag)
     if (data.site.pathPrefix) {
       if (pathname.startsWith(data.site.pathPrefix)) {
+
+        // Remove it from the pathname
         pathname = pathname.substring(
           data.site.pathPrefix.length,
           pathname.length);
+
+        // We'll add it back later
         prefix = data.site.pathPrefix;
       }
     }
 
     const split: string[] = pathname.split('/');
 
-    // Check if the first component represents a locale
+    // Check if the first component represents a locale (we can assume now
+    // there is not prefix)
     if (data.site.siteMetadata.locales.includes(split[1])) {
       split[1] = locale;
     } else {
