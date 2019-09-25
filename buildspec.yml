@@ -30,5 +30,5 @@ phases:
 artifacts:
   base-directory: catalog-politic-site/public
   files:
-    - **/*
+    - '**/*'
 
