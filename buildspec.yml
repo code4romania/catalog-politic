@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      - nodejs: 10
+      nodejs: 10
     commands:
       - echo Entered the install phase...
       - npm install -g gatsby-cli
