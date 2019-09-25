@@ -29,5 +29,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   base-directory: catalog-politic-site/public
+  name: $CODEBUILD_WEBHOOK_TRIGGER
   files:
     - '**/*'
