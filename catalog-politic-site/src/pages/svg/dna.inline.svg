@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="38" viewBox="0 0 44 38">
+    <defs>
+        <style>.c{fill:#f64c71;}</style>
+    </defs>
+    <g transform="translate(-2 -4)">
+        <path class="c" d="M2,42H46L24,4Zm24-6H22V32h4Zm0-8H22V20h4Z" />
+    </g>
+</svg>
