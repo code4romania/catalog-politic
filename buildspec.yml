@@ -18,8 +18,9 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
+      - cd catalog-politic-site
       - npm install
-      - cd catalog-politic-site && gatsby build
+      - gatsby build
       - tar -czvf build.tar.gz public
     finally:
       - echo This always runs even if the install command fails
