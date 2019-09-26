@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/dev2',
+  pathPrefix: `catalog-politic/${process.env.CODEBUILD_WEBHOOK_TRIGGER}`,
   siteMetadata: {
     title: `Catalog Politic`,
     description: `Catalog Politic este o platformă online care centralizează informațiile existente despre persoanele din funcții publice din România. Scopul este de a pune la dispoziția cetățenilor informații obiective cu privire la cei care le reprezintă interesele. Mai mult, prin baze de date complete și ușor de utilizat, proiectul oferă jurnaliștilor și cercetătorilor suport în activitățile de documentare.`,
