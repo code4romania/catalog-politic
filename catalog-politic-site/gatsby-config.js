@@ -2,9 +2,9 @@ module.exports = {
   pathPrefix: `catalog-politic/${process.env.CODEBUILD_WEBHOOK_TRIGGER}`,
   siteMetadata: {
     title: `Catalog Politic`,
-    description: `Catalog Politic este o platformă online care centralizează informațiile existente despre persoanele din funcții publice din România. Scopul este de a pune la dispoziția cetățenilor informații obiective cu privire la cei care le reprezintă interesele. Mai mult, prin baze de date complete și ușor de utilizat, proiectul oferă jurnaliștilor și cercetătorilor suport în activitățile de documentare.`,
+    description: `Catalog Politic is powered by the desire to centralise all public information on elected representatives and lower the information cost necessary for citizens, making public information truly public. For this end we are digitising hundreds of thousands of asset declarations, scraping dozens of official websites and manually collecting data where no automation is possible.`,
     author: `Code for Romania`,
-    locales: ['ro', 'en'],
+    locales: ['ro', 'en'], // First locale is assumed to be the default
     menuLinks: [{
       name: 'Politicians',
       path: '/politicieni',
@@ -30,6 +30,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,8 +39,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

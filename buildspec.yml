@@ -1,3 +1,6 @@
+# Changing this YML won't affect the CI process immediately
+# The CI process is manually managed by the ops team
+
 version: 0.2
 
 phases:
@@ -7,26 +10,13 @@ phases:
     commands:
       - echo Entered the install phase...
       - npm install -g gatsby-cli
-    finally:
-      - echo This always runs even if the update or install command fails
   pre_build:
     commands:
-      - echo Entered the pre_build phase...
-    finally:
-      - echo This always runs even if the login command fails
-  build:
-    commands:
-      - echo Entered the build phase...
-      - echo Build started on `date`
       - cd catalog-politic-site
       - npm install
-      - gatsby build --prefix-paths
-    finally:
-      - echo This always runs even if the install command fails
-  post_build:
+  build:
     commands:
-      - echo Entered the post_build phase...
-      - echo Build completed on `date`
+      - gatsby build --prefix-paths
 artifacts:
   base-directory: catalog-politic-site/public
   name: $CODEBUILD_WEBHOOK_TRIGGER
