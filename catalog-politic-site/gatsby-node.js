@@ -109,6 +109,9 @@ exports.onCreatePage = ({
           `/${removeSurroundingSlashes(page.path)}`,
           `/${removeSurroundingSlashes(page.path)}/`
         ].forEach(oldPath => {
+
+          if (oldPath === '//') return;
+
           createRedirect({
             fromPath: oldPath,
             toPath: localizedPath,
