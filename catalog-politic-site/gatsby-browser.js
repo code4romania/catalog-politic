@@ -48,7 +48,7 @@ function setupI18n() {
       }
 
       // Check if any other path components changed
-      if (split0.length == split1.length) {
+      if (split0.length === split1.length) {
 
         let same = true;
         for (let i = 2; i < split0.length; ++i) {
