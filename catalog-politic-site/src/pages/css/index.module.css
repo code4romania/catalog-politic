@@ -1,0 +1,85 @@
+.hero {
+  color: white;
+  margin: 0 auto 66px auto;
+  max-width: 768px;
+}
+
+.hero > *             { margin: 50px 0;   }
+.hero > *:first-child { margin-top: 0;    }
+.hero > *:last-child  { margin-bottom: 0; }
+
+.hero p {
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.hero {
+  animation: fadeIn linear 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ruler {
+  background-color: #F4F7F9;
+  height: 3px;
+  width: 115px;
+}
+
+.newspaper-graphic {
+  width: 100%;
+  max-width: 572px;
+}
+
+.info1 h2 {
+  font-size: 16px;
+  color: #99738D;
+  text-transform: uppercase;
+  margin: 20px 0;
+  line-height: 16px;
+}
+
+.info1 h3 {
+  font-size: 31px;
+  line-height: 43px;
+  margin: 20px 0;
+}
+
+.info1 h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 2px 0;
+}
+
+.info1 p {
+  margin: 2px 0;
+}
+
+.info1 td + td {
+  padding-left: 15px;
+}
+
+.info1 tr + tr td {
+  padding-top: 45px;
+}
+
+
+@media (max-width: 1024px) {
+  .info1 h2, .info1 h3 {
+    text-align: center;
+  }
+
+  .ruler {
+    margin: auto;
+  }
+
+  .newspaper-graphic {
+    max-height: 75vh;
+  }
+}

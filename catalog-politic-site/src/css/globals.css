@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap');
+@import './variables.css';
+
+/* Typography */
+html { font-family: 'Titillium Web', sans-serif; }
+input, textarea, button { font-family: inherit; }
+      h1 { font-weight: semibold; font-size: 48px; line-height: 68px; }
+      h2 { font-weight: semibold; font-size: 39px; line-height: 55px; }
+.tagline { font-weight: semibold; font-size: 31px; line-height: 43px; }
+       p { font-weight: regular;  font-size: 16px; line-height: 24px; }
+
+/* Layout */
+body { margin: 0; }
+
+/* Styling */
+a { text-decoration: none; }
+
+/* Gradient background */
+.main-container {
+  background: radial-gradient(
+    100vw 100vh ellipse at 100vw 0,
+    var(--color-secondary) 0%,
+    var(--color-primary) 100%);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1029px) {
+  .main-container {
+    background: radial-gradient(
+      200vw 200vh ellipse at 200vw 0,
+      var(--color-secondary) 0%,
+      var(--color-primary) 100%);
+    background-position: -40vw 0;
+    background-size: 200vw 200vh;
+  }
+}
+
+button {
+  user-select: none;
+  outline: none;
+}

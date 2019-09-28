@@ -1,0 +1,95 @@
+@import '../../css/variables.css';
+
+.header {
+  margin: 37px 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  margin-right: auto;
+}
+
+.menu ol {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+}
+
+.link {
+  padding: 10px 20px;
+  border-radius: 3px;
+
+  font-size: 16px;
+  font-weight: semibold;
+
+  text-align: center;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+
+  .link.special { margin: 10px; }
+
+  .menu {
+    /* Sizings */
+    box-sizing: border-box;
+    padding: 37px 6vw;
+    max-width: 25rem;
+    width: 100%;
+    height: 100vh;
+
+    /* Positioning */
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    /* Styling */
+    background-color: var(--color-primary);
+    box-shadow: -30px 0px 30px 0px rgba(0, 0, 0, 0.5);
+
+    /* Layout */
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .menu ol {
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  li {
+    margin: 0 5px;
+  }
+
+  .special {
+    text-decoration: none;
+  }
+}
+
+
+/* Only use hover on devices that support it */
+@media not all and (hover: none) {
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  /* special has a button-like aspect, avoid text-decoration for consistency */
+  .special:hover {
+    text-decoration: none;
+  }
+}

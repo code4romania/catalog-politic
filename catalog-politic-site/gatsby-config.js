@@ -1,11 +1,37 @@
 module.exports = {
+  pathPrefix: `catalog-politic/${process.env.CODEBUILD_WEBHOOK_TRIGGER}`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Catalog Politic`,
+    description: `Catalog Politic is powered by the desire to centralise all public information on elected representatives and lower the information cost necessary for citizens, making public information truly public. For this end we are digitising hundreds of thousands of asset declarations, scraping dozens of official websites and manually collecting data where no automation is possible.`,
+    author: `Code for Romania`,
+    locales: ['ro', 'en'], // First locale is assumed to be the default
+    menuLinks: [{
+      name: 'Politicians',
+      path: '/politicieni',
+      special: false
+    }, {
+      name: 'Parties',
+      path: '/partide',
+      special: false
+    }, {
+      name: 'Data',
+      path: '/date',
+      special: false
+    }, {
+      name: 'Visualisations',
+      path: '/vizualizari',
+      special: false
+    }, {
+      name: 'Presidential election',
+      path: '/prezidentiale',
+      special: true
+    }]
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,8 +39,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -23,12 +47,32 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        display: `minimal-ui`
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.tsx`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)({ stage: 0 }),
+          require(`postcss-color-function`)({ preserveCustomProps: false }),
+          require(`postcss-font-weights`)()
+        ]
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+        options: {
+            rule: {
+              include: /\.inline\.svg$/
+            }
+        }
+    }
+  ]
 }

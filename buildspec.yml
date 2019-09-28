@@ -1,0 +1,24 @@
+# Changing this YML won't affect the CI process immediately
+# The CI process is manually managed by the ops team
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Entered the install phase...
+      - npm install -g gatsby-cli
+  pre_build:
+    commands:
+      - cd catalog-politic-site
+      - npm install
+  build:
+    commands:
+      - gatsby build --prefix-paths
+artifacts:
+  base-directory: catalog-politic-site/public
+  name: $CODEBUILD_WEBHOOK_TRIGGER
+  files:
+    - '**/*'
