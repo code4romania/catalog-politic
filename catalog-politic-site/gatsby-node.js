@@ -102,6 +102,21 @@ exports.onCreatePage = ({
         }
       });
 
+      // Gatsby develop falls into an infinite loop if /404.html/page-data.json
+      // does not exist, thus we're recreating the page here (with default 
+      // locale)
+      if (page.path === '/404.html' && index === 0) {
+        createPage({
+          ...page,
+          path: '/404.html',
+          context: {
+            initialLanguage: locale,
+            initialI18nStore: translations,
+            pathname: '/404.html'
+          }
+        });
+      }
+
       // Create redirects from all unlocalized pathnames to localized pathnames
       // (using the default locale)
       if (index === 0) {
