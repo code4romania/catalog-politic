@@ -12,7 +12,7 @@ Information about political figures is highly dispared, the public accessible da
 
 ## Contributing
 
-This project is built by amazing volunteers and you can be one of them! Here's a list of ways in [which you can contribute to this project](https://github.com/code4romania/ce-ma-fac/blob/develop/.github/CONTRIBUTING.md).
+This project is built by amazing volunteers and you can be one of them! Here's a list of ways in [which you can contribute to this project](https://github.com/code4romania/.github/blob/master/CONTRIBUTING.md).
 
 You can also have a look at the list below for the open issues. Please leave a comment on an issue if you want to work on it.
 ### Currently [open issues](https://github.com/code4romania/catalog-politic/issues)
