@@ -1,6 +1,6 @@
 # Catalog Politic (website) 
 
-[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/standard-repo-template.svg?style=for-the-badge)](https://github.com/code4romania/standard-repo-template/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/standard-repo-template.svg?style=for-the-badge)](https://github.com/code4romania/standard-repo-template/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
+[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/catalog-politic.svg?style=for-the-badge)](https://github.com/code4romania/catalog-politic/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/catalog-politic.svg?style=for-the-badge)](https://github.com/code4romania/catalog-politic/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
 
 Catalog Politic aims to become the first profile aggregator of political figures.
 
@@ -12,7 +12,7 @@ Information about political figures is highly dispared, the public accessible da
 
 ## Contributing
 
-This project is built by amazing volunteers and you can be one of them! Here's a list of ways in [which you can contribute to this project](.github/CONTRIBUTING.MD).
+This project is built by amazing volunteers and you can be one of them! Here's a list of ways in [which you can contribute to this project](https://github.com/code4romania/ce-ma-fac/blob/develop/.github/CONTRIBUTING.md).
 
 You can also have a look at the list below for the open issues. Please leave a comment on an issue if you want to work on it.
 ### Currently [open issues](https://github.com/code4romania/catalog-politic/issues)
